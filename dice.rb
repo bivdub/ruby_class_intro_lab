@@ -6,9 +6,7 @@ class Dice
 	end
 
 	def roll 
-		roll = rand(1..@sides)
-		@rolls.push(roll)
-		return roll
+		@rolls << rand(1..@sides)
 	end
 
 	def get_rolls
@@ -19,10 +17,6 @@ end
 
 d20 = Dice.new 20
 
-puts d20.roll
-puts d20.roll
-puts d20.roll
-puts d20.roll
-puts d20.roll
-puts d20.roll
+6.times { d20.roll }
+
 puts d20.get_rolls.inspect
